@@ -20,6 +20,7 @@
 typedef int	t_boolean;
 # define TRUE 1
 # define FALSE 0
+# define WHITESPACE " \t\r\n\v\f"
 
 /*
 ** Allocation Section
