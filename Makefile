@@ -71,7 +71,8 @@ SRCS=./allocations/ft_bzero.c \
 	 ./str_functions/ft_replace.c \
 	 ./str_functions/ft_strfjoin.c \
 	 ./str_functions/ft_strcmp.c \
-	 ./str_functions/ft_count_char.c
+	 ./str_functions/ft_count_char.c \
+	 ./str_functions/ft_strtablen.c
 OBJS=$(SRCS:.c=.o)
 INC=libft.h
 RM=rm -f

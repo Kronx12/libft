@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.le-101.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/03/05 06:36:12 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2020/05/22 02:44:27 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,5 +175,6 @@ void				ft_replace(char *str, char c, char d);
 char				*ft_strtrim(char const *s, char const *set);
 int					ft_strcmp(char *fi, char *se);
 int					ft_count_char(char *str, char c);
+int 				ft_strtablen(char **tab);
 
 #endif
