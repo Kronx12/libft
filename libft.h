@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.le-101.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/05/22 02:44:27 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2020/05/30 09:02:25 by gbaud            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int					ft_strchr_int(const char *s, int c);
 char				*ft_strchr_chr(const char *s, int c);
 int					ft_strrchr_int(const char *s, int c);
 char				*ft_strrchr_chr(const char *s, int c);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
 
 /*
 ** List Section
@@ -176,5 +178,30 @@ char				*ft_strtrim(char const *s, char const *set);
 int					ft_strcmp(char *fi, char *se);
 int					ft_count_char(char *str, char c);
 int 				ft_strtablen(char **tab);
+
+/*
+** Btree Functions Section
+*/
+
+typedef struct		s_btree
+{
+	struct s_btree	*parent;
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}					t_btree;
+
+t_btree				*btree_create_node(t_btree *parent, void *item);
+void				btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void				btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void				btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+void				btree_insert_data(t_btree **root, void *item,
+						int (*cmpf)(void *, void *));
+void				*btree_search_item(t_btree *root, void *data_ref,
+						int (*cmpf)(void *, void *));
+int					btree_level_count(t_btree *root);
+void				btree_apply_by_level(t_btree *root,
+						void (*applyf)(void *item, int current_level,
+						int is_first_elem));
 
 #endif

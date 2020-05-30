@@ -24,6 +24,8 @@ SRCS=./allocations/ft_bzero.c \
 	 ./checker/ft_strchr_int.c \
 	 ./checker/ft_strrchr_chr.c \
 	 ./checker/ft_strrchr_int.c \
+	 ./checker/ft_min.c \
+	 ./checker/ft_max.c \
 	 ./common_functions/ft_additional_functions.c \
 	 ./common_functions/ft_apply_flag.c \
 	 ./common_functions/ft_fill_struct.c \
@@ -72,7 +74,15 @@ SRCS=./allocations/ft_bzero.c \
 	 ./str_functions/ft_strfjoin.c \
 	 ./str_functions/ft_strcmp.c \
 	 ./str_functions/ft_count_char.c \
-	 ./str_functions/ft_strtablen.c
+	 ./str_functions/ft_strtablen.c \
+	 ./btree/btree_create_node.c \
+	 ./btree/btree_apply_prefix.c \
+	 ./btree/btree_apply_infix.c \
+	 ./btree/btree_apply_suffix.c \
+	 ./btree/btree_insert_data.c \
+	 ./btree/btree_search_item.c \
+	 ./btree/btree_level_count.c \
+	 ./btree/btree_apply_by_level.c
 OBJS=$(SRCS:.c=.o)
 INC=libft.h
 RM=rm -f
