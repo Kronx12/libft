@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbaud <gbaud@student.le-101.fr>            +#+  +:+       +#+        */
+/*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/05/30 09:02:25 by gbaud            ###   ########lyon.fr   */
+/*   Updated: 2020/06/01 08:47:28 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ void				ft_replace(char *str, char c, char d);
 char				*ft_strtrim(char const *s, char const *set);
 int					ft_strcmp(char *fi, char *se);
 int					ft_count_char(char *str, char c);
-int 				ft_strtablen(char **tab);
+int					ft_strtablen(char **tab);
 
 /*
 ** Btree Functions Section
