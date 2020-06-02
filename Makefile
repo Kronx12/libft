@@ -3,6 +3,7 @@ CFLAGS=-Wall -Wextra -Werror
 NAME=libft.a
 SRCS=./allocations/ft_bzero.c \
 	 ./allocations/ft_calloc.c \
+	 ./allocations/ft_realloc.c \
 	 ./allocations/ft_memccpy.c \
 	 ./allocations/ft_memchr.c \
 	 ./allocations/ft_memcmp.c \

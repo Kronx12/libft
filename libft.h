@@ -29,6 +29,7 @@ typedef int	t_boolean;
 void				ft_bzero(void *s, size_t len);
 void				*ft_memset(void *s, int c, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
+char                *ft_realloc(char *str, int size);
 char				*ft_strdup(const char *s);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
