@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g3
 NAME=libft.a
 SRCS=./allocations/ft_bzero.c \
 	 ./allocations/ft_calloc.c \
@@ -83,7 +83,8 @@ SRCS=./allocations/ft_bzero.c \
 	 ./btree/btree_insert_data.c \
 	 ./btree/btree_search_item.c \
 	 ./btree/btree_level_count.c \
-	 ./btree/btree_apply_by_level.c
+	 ./btree/btree_apply_by_level.c \
+	 ./btree/btree_print_util.c
 OBJS=$(SRCS:.c=.o)
 INC=libft.h
 RM=rm -f

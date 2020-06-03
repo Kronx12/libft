@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/30 08:39:53 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:45:11 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/02 14:29:54 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	btree_insert_data(t_btree **root, void *item,
 	if (!root || !*root || !item)
 	{
 		if (item && root)
-			*root = btree_create_node(NULL, item);
+			*root = btree_create_node(item);
 		return ;
 	}
 	current = *root;
@@ -29,13 +29,13 @@ void	btree_insert_data(t_btree **root, void *item,
 		if (current->left)
 			btree_insert_data(&current->left, item, cmpf);
 		else
-			current->left = btree_create_node(current, item);
+			current->left = btree_create_node(item);
 	}
 	else
 	{
 		if (current->right)
 			btree_insert_data(&current->right, item, cmpf);
 		else
-			current->right = btree_create_node(current, item);
+			current->right = btree_create_node(item);
 	}
 }
