@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:48:48 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/03 03:03:28 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/04 06:43:00 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 char	*ft_realloc(char *str, int size)
 {
 	size_t	count;
-	char	*nstr;
+	char	*newstr;
 
 	count = 0;
 	if (!str)
 		return (NULL);
-	if (!(nstr = ft_calloc(ft_strlen(str) + size + 1, sizeof(char))))
+	newstr = (char *)ft_calloc((ft_strlen(str) + size + 1), sizeof(*newstr));
+	if (!newstr)
 		return (NULL);
 	while (count < (ft_strlen(str) + size) && str[count])
 	{
-		nstr[count] = str[count];
+		newstr[count] = str[count];
 		count++;
 	}
-	nstr[count] = '\0';
+	newstr[count] = '\0';
 	free(str);
-	return (nstr);
+	return (newstr);
 }
