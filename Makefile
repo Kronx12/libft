@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g3
 NAME=libft.a
 SRCS=./allocations/ft_bzero.c \
 	 ./allocations/ft_calloc.c \
