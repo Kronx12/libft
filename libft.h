@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/04 06:42:35 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/06 10:20:41 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-
+int					ft_free_return(void *v);
 /*
 ** Checker Section
 */
@@ -106,7 +106,7 @@ void				ft_putnbr(int n);
 */
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
+#  define BUFFER_SIZE 1
 # endif
 
 char				*ft_strfdup(char *src, int n, int f);
@@ -179,6 +179,7 @@ char				*ft_strtrim(char const *s, char const *set);
 int					ft_strcmp(char *fi, char *se);
 int					ft_count_char(char *str, char c);
 int					ft_strtablen(char **tab);
+char    			**ft_rm_null_tab(char **tab, t_boolean f);
 
 /*
 ** Btree Functions Section

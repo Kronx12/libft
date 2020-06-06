@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 02:08:26 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:38:33 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/06 10:31:52 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strfdup(char *src, int n, int f)
 	if (n < 0)
 	{
 		i = ft_strslen((char *)src) + 1;
-		if (!(src2 = (char*)malloc((i <= BUFFER_SIZE) ? BUFFER_SIZE + 1 : i)))
+		if (!(src2 = ft_calloc((i <= BUFFER_SIZE) ? BUFFER_SIZE + 1 : i, 1)))
 			return (NULL);
 		i = -1;
 		while (src[++i])
@@ -38,14 +38,13 @@ char	*ft_strfdup(char *src, int n, int f)
 	}
 	else
 	{
-		if (!(src2 = (char*)malloc(n + 1)))
+		if (!(src2 = ft_calloc(n + 1, 1)))
 			return (NULL);
 		i = -1;
 		while (++i < n)
 			src2[i] = src[i];
 	}
-	src2[i] = '\0';
-	if (f == 1)
+	if (!(src2[i] = '\0') && f == 1)
 		free(src);
 	return (src2);
 }

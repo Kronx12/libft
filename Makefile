@@ -11,6 +11,7 @@ SRCS=./allocations/ft_bzero.c \
 	 ./allocations/ft_memmove.c \
 	 ./allocations/ft_memset.c \
 	 ./allocations/ft_strdup.c \
+	 ./allocations/ft_free_return.c \
 	 ./checker/ft_allisascii.c \
 	 ./checker/ft_allisalpha.c \
 	 ./checker/ft_allisdigit.c \
@@ -76,6 +77,7 @@ SRCS=./allocations/ft_bzero.c \
 	 ./str_functions/ft_strcmp.c \
 	 ./str_functions/ft_count_char.c \
 	 ./str_functions/ft_strtablen.c \
+	 ./str_functions/ft_rm_null_tab.c \
 	 ./btree/btree_create_node.c \
 	 ./btree/btree_apply_prefix.c \
 	 ./btree/btree_apply_infix.c \

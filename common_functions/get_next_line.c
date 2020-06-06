@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 03:35:25 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:38:29 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/06 10:36:13 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ int		readed_n(int fd, char **line, char *save[4096], char *buffer)
 {
 	*line = ft_strfjoin(*line,
 			ft_strfdup(buffer, contain(buffer, '\n') - 1, 0), 2);
-	save[fd] = ft_strfdup(&buffer[contain(buffer, '\n')], -1, 0);
+	if ((&buffer[contain(buffer, '\n')])[0] != '\0')
+		save[fd] = ft_strfdup(&buffer[contain(buffer, '\n')], -1, 0);
 	return (1);
 }
 
