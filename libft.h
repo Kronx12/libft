@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/06 10:20:41 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/08 15:24:09 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,7 +179,7 @@ char				*ft_strtrim(char const *s, char const *set);
 int					ft_strcmp(char *fi, char *se);
 int					ft_count_char(char *str, char c);
 int					ft_strtablen(char **tab);
-char    			**ft_rm_null_tab(char **tab, t_boolean f);
+char				**ft_rm_null_tab(char **tab, t_boolean f);
 
 /*
 ** Btree Functions Section

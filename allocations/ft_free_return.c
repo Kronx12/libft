@@ -6,15 +6,15 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 10:19:12 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/06 10:22:20 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/06/08 15:18:56 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_free_return(void *v)
+int	ft_free_return(void *v)
 {
-    if (v)
-        free(v);
-    return (1);
+	if (v)
+		free(v);
+	return (1);
 }
