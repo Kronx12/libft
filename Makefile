@@ -67,6 +67,7 @@ SRCS=./allocations/ft_bzero.c \
 	 ./str_functions/ft_strlcpy.c \
 	 ./str_functions/ft_strlcat.c \
 	 ./str_functions/ft_strnstr.c \
+	 ./str_functions/ft_strstr.c \
 	 ./str_functions/ft_substr.c \
 	 ./str_functions/ft_strjoin.c \
 	 ./str_functions/ft_strtrim.c \

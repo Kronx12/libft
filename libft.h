@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/08 15:24:09 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/09 05:57:39 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strcpy(char *dest, const char *src);
 size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
+char				*ft_strstr(char *str, char *to_find);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strncmp(const char *fi, const char *se, size_t len);
 int					ft_tolower(int c);
