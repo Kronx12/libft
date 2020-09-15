@@ -50,6 +50,7 @@ SRCS=./allocations/ft_bzero.c \
 	 ./list_functions/ft_lstclear_bonus.c \
 	 ./list_functions/ft_lstiter_bonus.c \
 	 ./list_functions/ft_lstmap_bonus.c \
+	 ./list_functions/ft_lstremove_if.c \
 	 ./printers/ft_putchar_fd.c \
 	 ./printers/ft_putstr_fd.c \
 	 ./printers/ft_putendl_fd.c \
@@ -87,13 +88,15 @@ SRCS=./allocations/ft_bzero.c \
 	 ./btree/btree_search_item.c \
 	 ./btree/btree_level_count.c \
 	 ./btree/btree_apply_by_level.c \
-	 ./btree/btree_print_util.c
+	 ./btree/btree_print_util.c		\
+	 ./debug/ft_debug_str_1d.c \
+	 ./debug/ft_debug_str_2d.c
 OBJS=$(SRCS:.c=.o)
 INC=libft.h
 RM=rm -f
 	
 %.c%.o:
-	$(CC) $(CFLAGS) -c $< -o $@ $(INC) -g
+	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
 all:		$(NAME)
 

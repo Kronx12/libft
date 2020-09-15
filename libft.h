@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/09/09 05:57:39 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/12 04:13:52 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
+	struct s_list	*prev;
 }					t_list;
 
 int					ft_free_strs(int count, ...);
@@ -80,6 +81,9 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+void 				ft_lstremove_node(t_list **head_ref, t_list *del);
+void    			ft_lstremove_if(t_list **head, void *value, void (*del)(void *),
+                        int (*cond)(void *, void *));
 
 /*
 ** Converters Section
@@ -207,5 +211,12 @@ int					btree_level_count(t_btree *root);
 void				btree_apply_by_level(t_btree *root,
 						void (*applyf)(void *item, int current_level,
 						int is_first_elem));
+
+/*
+** Debug Functions Section
+*/
+void    ft_debug_str_1d(char **arr);
+void	ft_debug_str_2d(char ***arr);
+
 
 #endif

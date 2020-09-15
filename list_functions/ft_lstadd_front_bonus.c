@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 22:42:04 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:39:40 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/12 03:36:43 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	if (new != NULL)
 	{
+		(*alst)->prev = new;
 		new->next = *alst;
 		*alst = new;
 	}

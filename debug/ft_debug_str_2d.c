@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_debug_str_2d.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 04:18:24 by gbaud             #+#    #+#             */
-/*   Updated: 2020/09/10 10:35:11 by gbaud            ###   ########.fr       */
+/*   Created: 2020/09/10 04:38:42 by gbaud             #+#    #+#             */
+/*   Updated: 2020/09/10 09:12:01 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_strncmp(const char *fi, const char *se, size_t len)
+void	ft_debug_str_2d(char ***arr)
 {
-	const unsigned char	*f;
-	const unsigned char	*s;
-	size_t				i;
+	int i;
+	int j;
 
-	i = 0;
-	f = (const unsigned char *)fi;
-	s = (const unsigned char *)se;
-	if (len == 0)
-		return (0);
-	while (i < len && f[i] == s[i] && f[i] != '\0')
-		i++;
-	if (i == len)
-		i--;
-	return ((unsigned char)f[i] - s[i]);
+	i = -1;
+	ft_printf("[\n");
+	while (arr[++i])
+    {
+    	ft_printf("\t[ ");
+        j = -1;
+	    while (arr[i][++j])
+	    {
+		    ft_printf("\"%s\"", arr[i][j]);
+		    if (arr[i][j + 1])
+			    ft_printf(", ");
+    	}
+        ft_printf(" ]\n");
+    }
+    ft_printf("]\n");
 }

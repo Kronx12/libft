@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:16:40 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:39:42 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/12 03:31:11 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 		tmp = *alst;
 		while (tmp->next != NULL)
 			tmp = tmp->next;
+		new->prev = tmp;
 		tmp->next = new;
 	}
 }

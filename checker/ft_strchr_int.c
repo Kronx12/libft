@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:37:07 by gbaud             #+#    #+#             */
-/*   Updated: 2020/06/01 08:37:00 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/10 02:33:22 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ int		ft_strchr_int(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-		{
 			return (i);
-		}
 		i++;
 	}
 	if (s[i] == c)
