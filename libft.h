@@ -6,7 +6,7 @@
 /*   By: gbaud <gbaud@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 11:26:31 by gbaud             #+#    #+#             */
-/*   Updated: 2020/09/12 04:13:52 by gbaud            ###   ########.fr       */
+/*   Updated: 2020/09/19 07:53:18 by gbaud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-void 				ft_lstremove_node(t_list **head_ref, t_list *del);
-void    			ft_lstremove_if(t_list **head, void *value, void (*del)(void *),
-                        int (*cond)(void *, void *));
+void				ft_lstremove_node(t_list **head_ref, t_list *del);
+void				ft_lstremove_if(t_list **head, void *value,
+						void (*del)(void *),
+						int (*cond)(void *, void *));
 
 /*
 ** Converters Section
@@ -215,8 +216,7 @@ void				btree_apply_by_level(t_btree *root,
 /*
 ** Debug Functions Section
 */
-void    ft_debug_str_1d(char **arr);
-void	ft_debug_str_2d(char ***arr);
-
+void				ft_debug_str_1d(char **arr);
+void				ft_debug_str_2d(char ***arr);
 
 #endif
